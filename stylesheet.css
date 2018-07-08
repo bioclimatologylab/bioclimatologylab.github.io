@@ -1,0 +1,296 @@
+/* Generic Styles */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Text */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+p {
+    line-height: 1.5;
+    margin: 0 0 2rem 0;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+/* Links */
+
+a {
+    color: #333399;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.active:hover {
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+
+.nav {
+    background: #e8e8f9;
+}
+
+.nav-container {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 0.75rem;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1280px;
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .nav-container {
+        font-size: 0.9rem;
+    }
+}
+
+.nav-container .nav-link:not(:last-child) {
+    margin-right: 2em;
+}
+
+@media (min-width: 768px) {
+    .nav-container .nav-link:not(:last-child) {
+        margin-right: 4em;
+    }
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #333399;
+    padding-bottom: 2px;
+}
+
+@media (min-width: 768px) {
+    .nav-link.active {
+        padding-bottom: 5px;
+    }
+}
+
+/* Title and Logo */
+
+.title {
+    align-items: center;
+    display: flex;
+}
+
+.title svg {
+    fill: #333399;
+    height: 16px;
+    margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .title svg {
+        height: 32px;
+    }
+}
+
+/* Content */
+
+.content {
+    margin: auto;
+    max-width: 1280px;
+    padding: 1rem 0;
+    width: 90%;
+}
+
+/* Slideshow */
+
+.slideshow {
+    height: 100vh;
+    margin: auto;
+    max-width: 1280px;
+    padding: 2rem 0;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .slideshow {
+        height: 1000px;
+    }
+}
+
+.slideshow-container {
+    background: #000;
+    width: 100%;
+}
+
+.slideshow .slide {
+    display: none;
+    float: right;
+    height: 100%;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 100%;
+}
+
+.slide img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* Footer */
+
+.contact a {
+    margin-right: 1em;
+}
+
+.footer {
+    background: #e8e8f9;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.footer-container {
+    align-items: center;
+    display: flex;
+    font-size: 0.7rem;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1280px;
+    padding: 0.5rem 0;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        font-size: 0.8rem;
+    }
+}
+
+.footer-container .icon svg {
+    background-size: 16px;
+    height: 16px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    width: 16px;
+}
+
+@media (min-width: 480px) {
+    .footer-container .icon svg {
+        background-size: 20px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+/* Icons */
+
+.icon svg {
+    background-size: 20px;
+    display: inline-block;
+    fill: #333399;
+    height: 20px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.icon-code svg,
+.icon-design svg,
+.icon-program svg {
+    fill: #ffffff;
+}
+
+/* Mobile and Tablet */
+
+.mobile-hide {
+    display: none;
+}
+
+@media (min-width: 480px) {
+    .mobile-hide {
+        display: initial;
+    }
+}
+
+.tablet-hide {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .tablet-hide {
+        display: initial;
+    }
+}
