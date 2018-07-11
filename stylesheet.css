@@ -37,7 +37,17 @@ h2 {
     font-size: 1.25rem;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
 p {
+    font-size: 0.9rem;
     line-height: 1.5;
     margin: 0 0 2rem 0;
 }
@@ -49,7 +59,7 @@ p {
 /* Links */
 
 a {
-    color: #333399;
+    color: #314f1c;
     font-weight: bold;
     text-decoration: none;
 }
@@ -65,7 +75,7 @@ a.active:hover {
 /* Navigation Bar */
 
 .nav {
-    background: #e8e8f9;
+    background: #e1e8dc;
 }
 
 .nav-container {
@@ -146,12 +156,21 @@ a.active:hover {
 
 .person {
     align-items: center;
+    background-image: url("tree.svg");
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 360px;
+    justify-content: space-between;
     margin: 1rem;
+    overflow: hidden;
+    padding: 110px 0 60px 0;
+    position: relative;
     text-align: center;
     width: 200px;
+}
+
+.person-name {
+    max-width: 130px;
 }
 
 .profile-picture {
@@ -159,14 +178,18 @@ a.active:hover {
 }
 
 .profile-picture img {
-    border-radius: 100px;
-    max-height: 100px;
-    max-width: 100px;
+    border-radius: 72px;
+    max-height: 72px;
 }
 
-.bio {
-    margin: 0;
-    overflow: hidden;
+.expand {
+    font-size: 35px;
+    position: absolute;
+    top: 303px;
+}
+
+.expand:before {
+    content: '⏷';
 }
 
 /* Slideshow */
@@ -248,7 +271,7 @@ a.active:hover {
 }
 
 .footer {
-    background: #e8e8f9;
+    background: #e1e8dc;
     bottom: 0;
     left: 0;
     position: absolute;
