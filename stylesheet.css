@@ -157,13 +157,14 @@ a.active:hover {
 .person {
     align-items: center;
     background-image: url("tree.svg");
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    height: 360px;
+    height: 400px;
     justify-content: space-between;
     margin: 1rem;
     overflow: hidden;
-    padding: 110px 0 60px 0;
+    padding: 110px 0 100px 0;
     position: relative;
     text-align: center;
     width: 200px;
@@ -183,13 +184,13 @@ a.active:hover {
 }
 
 .expand {
-    font-size: 35px;
     position: absolute;
-    top: 303px;
+    top: 286px;
 }
 
 .expand:before {
     content: '⏷';
+    font-size: 35px;
 }
 
 /* Slideshow */
