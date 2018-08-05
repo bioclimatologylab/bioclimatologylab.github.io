@@ -63,15 +63,6 @@ a.active:hover {
     text-decoration: none;
 }
 
-/* Main page */
-
-.main {
-    background-attachment: fixed;
-    background-image: url('assets/photos/mountain.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* Navigation Bar */
 
 .nav {
@@ -146,18 +137,77 @@ a.active:hover {
     text-align: center;
 }
 
-/* Sections */
+/* Header */
 
-#people,
-#research {
-    margin-bottom: 3rem;
+.header {
+    background-image: url(assets/photos/mountain.jpg);
+    background-position-y: -258px;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
 }
+
+.header:before {
+    background-color: #000000;
+    content: '';
+    height: 100%;
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+}
+
+.header-text {
+    background-color: #E4EADE;
+    color: #000000;
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 1rem;
+    position: static;
+    text-align: center;
+    text-shadow: none;
+    width: auto;
+}
+
+@media (min-width: 768px) {
+    .header-text {
+        background: none;
+        color: #ffffff;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        right: 0;
+        text-shadow: 2px 2px #000000;
+        top: 120px;
+        width: 80%;
+    }
+}
+
+.header-text h1 {
+    font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.header-text h2 {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Sections */
 
 #people,
 #research,
 #publications {
-    background-color: rgba(255, 255, 255, 0.96);
-    padding: 1rem;
+    margin-top: 2rem;
 }
 
 /* People */
@@ -179,7 +229,8 @@ a.active:hover {
 
 @media (min-width: 768px) {
     .person {
-        flex: 1 1 45%;
+        flex: 0 1 auto;
+        width: calc(50% - 2rem);
     }
 }
 
@@ -264,10 +315,9 @@ a.active:hover {
     display: flex;
     font-size: 0.7rem;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 4rem;
     max-width: 1280px;
     padding: 0.5rem 0;
-    width: 90%;
 }
 
 @media (min-width: 768px) {
